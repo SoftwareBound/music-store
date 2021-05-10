@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "Name": "Classic Guitar",
+    "Description": "The guitar is a fretted musical instrument that typically has six strings",
+    "Price": "10",
+    "Creation Date": "10/05/2021"
+  },
+
+  {
+    "id": "2",
+    "Name": "Acoustic Guitar",
+    "Description": "An acoustic guitar is a musical instrument in the guitar family",
+    "Price": "15",
+    "Creation Date": "10/05/2021"
+  }
+]
