@@ -1,0 +1,18 @@
+.main-title-container {
+  background-color: dodgerblue;
+  border-style: solid;
+  height: 10vh;
+  font-size: x-large;
+}
+
+.toolbar-container {
+  margin-top: 1.5em;
+}
+
+.products-container {
+}
+
+.products-details {
+  border-style: ridge;
+  height: 70vh;
+}
