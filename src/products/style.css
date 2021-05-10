@@ -1,0 +1,14 @@
+.product-item {
+  border-style: solid;
+  margin-bottom: 1em;
+}
+
+.product-item-title {
+  font-size: large;
+  font-weight: bold;
+}
+
+.product-item-description {
+  font-size: medium;
+  color: grey;
+}

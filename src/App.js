@@ -4,6 +4,7 @@ import { AddButton, SearchProducts, FilterDropdown } from "./toolbar/";
 import { ProductItemContainer } from "./products";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+
 function App() {
   return (
     <div className=" container-fluid">
@@ -22,9 +23,7 @@ function App() {
             </div>
           </div>
           <div className="row content-container">
-            <div className="col-7 products-container">
-              <ProductItemContainer />
-              <ProductItemContainer />
+            <div className="col-7 ">
               <ProductItemContainer />
             </div>
             <div className="col-5 products-details"></div>
