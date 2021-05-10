@@ -9,6 +9,11 @@
   margin-top: 1.5em;
 }
 
+.products-container {
+  margin-right: 3em;
+  margin-left: 1em;
+}
+
 .products-details {
   border-style: ridge;
   height: 70vh;

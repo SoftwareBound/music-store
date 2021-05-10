@@ -15,5 +15,21 @@
     "Price": "15",
     "Creation Date": "10/05/2021",
     "ImageUrl": "https://www.play-acoustic-guitar.com/images/Yamaha-LJ16-Jumbo.jpg"
+  },
+  {
+    "id": "3",
+    "Name": "Electric guitar",
+    "Description": "An electric guitar is a guitar that requires external amplification in order to be heard at typical performance volumes, unlike a standard acoustic guitar.",
+    "Price": "40",
+    "Creation Date": "10/05/2021",
+    "ImageUrl": "https://sc1.musik-produktiv.com/pic-100018296xxl/ibanez-gio-grg170dx-bkn.jpg"
+  },
+  {
+    "id": "4",
+    "Name": "Bass guitar",
+    "Description": "The bass guitar, electric bass or simply bass, is the lowest-pitched member of the guitar family.",
+    "Price": "35",
+    "Creation Date": "10/05/2021",
+    "ImageUrl": "https://sc1.musik-produktiv.com/pic-100018296xxl/ibanez-gio-grg170dx-bkn.jpg"
   }
 ]

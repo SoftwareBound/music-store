@@ -8,6 +8,8 @@ const ProductItemContainer = () => {
     <div className="product-item-container">
       <ProductItem product_data={data[0]} />
       <ProductItem product_data={data[1]} />
+      <ProductItem product_data={data[2]} />
+      <ProductItem product_data={data[3]} />
     </div>
   );
 };
