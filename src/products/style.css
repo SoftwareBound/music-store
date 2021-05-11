@@ -23,3 +23,50 @@
   margin-block-end: 0.2em;
   width: auto;
 }
+
+.product-item-body:hover {
+  cursor: pointer;
+}
+
+.details-image img {
+  width: 10em;
+  height: 5em;
+}
+.details-image {
+  margin-top: 0.5em;
+}
+.details-price {
+  display: grid;
+}
+.details-price input {
+  width: 3em;
+  text-align: center;
+}
+
+.details-description textarea {
+  font-size: small;
+  width: -webkit-fill-available;
+  resize: both;
+}
+
+.products-details-container textarea,
+input {
+  font-size: small;
+}
+
+.products-details-container span {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.details-name {
+  display: grid;
+}
+
+.details-button {
+  float: right;
+}
+
+.details-button button {
+  margin-top: 1.5em;
+}

@@ -3,10 +3,15 @@ import "./style.css";
 import Button from "../common/components/Button";
 import { useDispatch } from "react-redux";
 import { deleteProduct } from "../redux/actions/productActions";
+import { displayProductDetails } from "../redux/actions/productDetailsActions";
 const ProductItem = ({ product_data }) => {
   const dispatch = useDispatch();
+
   const removeProductFromList = () => {
     dispatch(deleteProduct(product_data.id));
+  };
+  const displayDetails = () => {
+    dispatch(displayProductDetails(product_data));
   };
   return (
     <div className="row product-item">
@@ -18,7 +23,7 @@ const ProductItem = ({ product_data }) => {
           height="50px"
         />
       </div>
-      <div className="col-7">
+      <div className="col-7 product-item-body" onClick={() => displayDetails()}>
         <span className="product-item-title"> {product_data.Name}</span>
 
         <span className="product-item-description">

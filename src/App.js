@@ -1,7 +1,7 @@
 import "./style.css";
 import { headlines } from "./common/constants/titles";
 import { AddButton, SearchProducts, FilterDropdown } from "./toolbar/";
-import { ProductItemContainer } from "./products";
+import { ProductItemContainer, ProductDetailsContainer } from "./products";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
@@ -26,7 +26,9 @@ function App() {
             <div className="col-6 products-container ">
               <ProductItemContainer />
             </div>
-            <div className="col-5 products-details"></div>
+            <div className="col-5 products-details">
+              <ProductDetailsContainer />
+            </div>
           </div>
         </div>
       </Provider>
