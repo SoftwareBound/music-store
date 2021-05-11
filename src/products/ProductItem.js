@@ -1,9 +1,13 @@
 import React from "react";
-
 import "./style.css";
 import Button from "../common/components/Button";
-
+import { useDispatch } from "react-redux";
+import { deleteProduct } from "../redux/actions/productActions";
 const ProductItem = ({ product_data }) => {
+  const dispatch = useDispatch();
+  const removeProductFromList = () => {
+    dispatch(deleteProduct(product_data.id));
+  };
   return (
     <div className="row product-item">
       <div className="col-2 product-item-img">
@@ -25,7 +29,11 @@ const ProductItem = ({ product_data }) => {
         </span>
       </div>
       <div className="col-3 product-item-button">
-        <Button btn_name="Delete" btn_type="danger" />
+        <Button
+          btn_name="Delete"
+          btn_type="danger"
+          btn_func={removeProductFromList}
+        />
       </div>
     </div>
   );
