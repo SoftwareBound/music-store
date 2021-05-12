@@ -1,8 +1,16 @@
 import React from "react";
 
-const Input = ({ value, change_func }) => {
+const Input = ({ value, change_func, valid_func, validation, title }) => {
+  const handleChange = (input) => {
+    change_func(input);
+    if (!valid_func(input.target.value)) {
+      return validation([input.target.title, false]);
+    } else {
+      return validation([input.target.title, true]);
+    }
+  };
   return (
-    <input type="text" value={value} defaultValue="" onChange={change_func} />
+    <input title={title} type="text" value={value} onChange={handleChange} />
   );
 };
 

@@ -51,7 +51,7 @@
 
 .products-details-container textarea,
 input {
-  font-size: small;
+  font-size: medium;
 }
 
 .products-details-container span {
@@ -65,8 +65,4 @@ input {
 
 .details-button {
   float: right;
-}
-
-.details-button button {
-  margin-top: 1.5em;
 }

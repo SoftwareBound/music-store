@@ -13,3 +13,10 @@ export function checkProductExistInList(list) {
     products: list,
   };
 }
+
+export function saveProductDetails(product) {
+  return {
+    type: productDetailsActions.SAVE_PRODUCT_DETAILS,
+    details: product,
+  };
+}
