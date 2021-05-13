@@ -6,3 +6,9 @@ export function deleteProduct(productToDelete) {
     product: productToDelete,
   };
 }
+export function saveNewProductDetails(product) {
+  return {
+    type: productActions.SAVE_PRODUCT_DETAILS,
+    details: product,
+  };
+}

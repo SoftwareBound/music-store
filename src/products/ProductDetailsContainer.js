@@ -8,7 +8,7 @@ import {
   isPriceValid,
   isDescriptionValid,
 } from "../common/functions/detailsValidation";
-import { saveProductDetails } from "../redux/actions/productDetailsActions";
+import { saveNewProductDetails } from "../redux/actions/productActions";
 const ProductDetailsContainer = () => {
   const dispatch = useDispatch();
   const productsDetails = useSelector((state) => state.productDetailsReducer);
@@ -34,7 +34,7 @@ const ProductDetailsContainer = () => {
         Description: productsDetails.Description,
         Price: productsDetails.Price,
         Creation_Date: productsDetails.Creation_Date,
-        imageUrl: productsDetails.ImageUrl,
+        ImageUrl: productsDetails.ImageUrl,
       });
     }
   }, [productsDetails]);
@@ -51,7 +51,7 @@ const ProductDetailsContainer = () => {
     setValidationObject({ ...validationObject, [field_name]: value });
   };
   const saveData = () => {
-    dispatch(saveProductDetails);
+    dispatch(saveNewProductDetails(productDetailsLocal));
   };
 
   if (!Object.keys(productsDetails).length) {

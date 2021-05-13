@@ -13,6 +13,7 @@ const ProductItem = ({ product_data }) => {
   const displayDetails = () => {
     dispatch(displayProductDetails(product_data));
   };
+  console.log(product_data.ImageUrl);
   return (
     <div className="row product-item">
       <div className="col-2 product-item-img">

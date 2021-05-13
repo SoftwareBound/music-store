@@ -8,6 +8,8 @@ const ProductItemContainer = () => {
   const productsList = useSelector((state) => state.productReducer);
   const dispatch = useDispatch();
   useEffect(() => {
+    console.log(productsList);
+
     return dispatch(checkProductExistInList(productsList));
   }, [productsList, dispatch]);
 
