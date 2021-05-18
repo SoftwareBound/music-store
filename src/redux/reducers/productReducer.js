@@ -1,17 +1,21 @@
 import data from "../../MockData.json";
 import { productActions } from "../actions/actionType";
-export function productReducer(state = data, action) {
+import { init } from "../initData";
+
+export function productReducer(state = init(data), action) {
   switch (action.type) {
     case productActions.DELETE_PRODUCT:
       return state.filter((product) => product.id !== action.product);
     case productActions.SAVE_PRODUCT_DETAILS:
-      const updatedList = state.map((product) => {
-        if (product.id === action.details.id) {
-          return action.details;
-        }
-        return product;
-      });
-      return updatedList;
+      return state.filter((product) => product.id === action.details.id).length
+        ? state.map((product) => {
+            if (product.id === action.details.id) {
+              return action.details;
+            }
+            return product;
+          })
+        : [...state, action.details];
+
     default:
       return state;
   }

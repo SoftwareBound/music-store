@@ -13,3 +13,10 @@ export function checkProductExistInList(list) {
     products: list,
   };
 }
+
+export function addNewProductToList(product) {
+  return {
+    type: productDetailsActions.ADD_NEW_PRODUCT,
+    product: product,
+  };
+}

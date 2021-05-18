@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Textarea from "../common/components/Textarea";
 import Input from "../common/components/Input";
 import Button from "../common/components/Button";
+import { imageUrls } from "../common/constants/urls";
 import {
   isNameValid,
   isPriceValid,
@@ -18,13 +19,13 @@ const ProductDetailsContainer = () => {
     Description: "",
     Price: "",
     Creation_Date: "",
-    imageUrl: "",
+    ImageUrl: imageUrls.DEFAULT_IMAGE,
   });
-  const [isValid, setIsValid] = useState(true);
+  const [isValid, setIsValid] = useState(false);
   const [validationObject, setValidationObject] = useState({
-    name: true,
+    name: false,
     description: true,
-    price: true,
+    price: false,
   });
   useEffect(() => {
     if (productsDetails.id !== undefined) {
@@ -36,8 +37,18 @@ const ProductDetailsContainer = () => {
         Creation_Date: productsDetails.Creation_Date,
         ImageUrl: productsDetails.ImageUrl,
       });
+    } else {
+      setProductDetailsLocal({
+        id: "",
+        Name: "",
+        Description: "",
+        Price: "",
+        Creation_Date: "",
+        ImageUrl: imageUrls.DEFAULT_IMAGE,
+      });
     }
   }, [productsDetails]);
+
   useEffect(() => {
     if (Object.values(validationObject).includes(false)) {
       setIsValid(false);
@@ -48,24 +59,19 @@ const ProductDetailsContainer = () => {
 
   const validateField = (data) => {
     const [field_name, value] = data;
-    setValidationObject({ ...validationObject, [field_name]: value });
+    setValidationObject({ ...validationObject, ...{ [field_name]: value } });
   };
   const saveData = () => {
     dispatch(saveNewProductDetails(productDetailsLocal));
   };
 
-  if (!Object.keys(productsDetails).length) {
-    return (
-      <div>
-        Click on any product to see his details <br />
-        or add new product to the list{" "}
-      </div>
-    );
-  }
   return (
     <div className="products-details-container">
       <div className="row details-image">
-        <img src={productsDetails.ImageUrl} alt={productsDetails.Name} />
+        <img
+          src={productDetailsLocal.ImageUrl}
+          alt={productDetailsLocal.Name}
+        />
       </div>
 
       <div className=" col-6 details-name">

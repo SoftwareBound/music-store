@@ -23,6 +23,9 @@
   margin-block-end: 0.2em;
   width: auto;
 }
+.product-item-body {
+  display: grid;
+}
 
 .product-item-body:hover {
   cursor: pointer;

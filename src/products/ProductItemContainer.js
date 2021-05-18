@@ -7,9 +7,8 @@ import { useSelector, useDispatch } from "react-redux";
 const ProductItemContainer = () => {
   const productsList = useSelector((state) => state.productReducer);
   const dispatch = useDispatch();
-  useEffect(() => {
-    console.log(productsList);
 
+  useEffect(() => {
     return dispatch(checkProductExistInList(productsList));
   }, [productsList, dispatch]);
 
