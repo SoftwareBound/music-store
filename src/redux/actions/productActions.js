@@ -12,3 +12,14 @@ export function saveNewProductDetails(product) {
     details: product,
   };
 }
+export function sortListByName() {
+  return {
+    type: productActions.SORT_LIST_BY_NAME,
+  };
+}
+
+export function sortListByDate() {
+  return {
+    type: productActions.SORT_LIST_BY_DATE,
+  };
+}

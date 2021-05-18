@@ -1,6 +1,8 @@
 export const productActions = {
   DELETE_PRODUCT: "DELETE_PRODUCT",
   SAVE_PRODUCT_DETAILS: "SAVE_PRODUCT_DETAILS",
+  SORT_LIST_BY_NAME: "SORT_LIST_BY_NAME",
+  SORT_LIST_BY_DATE: "SORT_LIST_BY_DATE",
 };
 
 export const productDetailsActions = {

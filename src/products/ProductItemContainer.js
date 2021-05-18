@@ -10,7 +10,7 @@ const ProductItemContainer = () => {
 
   useEffect(() => {
     return dispatch(checkProductExistInList(productsList));
-  }, [productsList, dispatch]);
+  }, [productsList]);
 
   return (
     <div className="product-item-container">

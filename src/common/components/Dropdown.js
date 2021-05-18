@@ -1,6 +1,6 @@
 import React from "react";
 
-const Dropdown = () => {
+const Dropdown = ({ dispatch, actions }) => {
   return (
     <div>
       <div className="dropdown">
@@ -12,18 +12,21 @@ const Dropdown = () => {
           aria-haspopup="true"
           aria-expanded="false"
         >
-          Dropdown
+          Sorting Options
         </button>
         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a className="dropdown-item" href="/#">
-            Action
-          </a>
-          <a className="dropdown-item" href="/#">
-            Another action
-          </a>
-          <a className="dropdown-item" href="/#">
-            Something else here
-          </a>
+          <button
+            onClick={() => dispatch(actions[0]())}
+            className="dropdown-item"
+          >
+            Name
+          </button>
+          <button
+            onClick={() => dispatch(actions[1]())}
+            className="dropdown-item"
+          >
+            Recently Added
+          </button>
         </div>
       </div>
     </div>

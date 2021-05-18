@@ -15,6 +15,32 @@ export function productReducer(state = init(data), action) {
             return product;
           })
         : [...state, action.details];
+    case productActions.SORT_LIST_BY_NAME:
+      return [...state].sort(function (a, b) {
+        var nameA = a.Name.toUpperCase();
+        var nameB = b.Name.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+
+        return 0;
+      });
+    case productActions.SORT_LIST_BY_DATE:
+      return [...state].sort(function (a, b) {
+        var nameA = a.Creation_Date.toUpperCase();
+        var nameB = b.Creation_Date.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+
+        return 0;
+      });
 
     default:
       return state;

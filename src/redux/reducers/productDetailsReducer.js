@@ -1,6 +1,7 @@
 import { productDetailsActions } from "../actions/actionType";
 import { v4 as uniqueID } from "uuid";
 import { imageUrls } from "../../common/constants/urls";
+import { parseDateToString } from "../../common/functions/dateFunctions";
 export function productDetailsReducer(state = {}, action) {
   switch (action.type) {
     case productDetailsActions.DISPLAY_PRODUCT_DETAILS:
@@ -13,7 +14,7 @@ export function productDetailsReducer(state = {}, action) {
         Name: "",
         Description: "",
         Price: "",
-        Creation_Date: Date(),
+        Creation_Date: parseDateToString(),
         ImageUrl: imageUrls.DEFAULT_IMAGE,
       };
     default:
